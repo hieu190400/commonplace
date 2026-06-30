@@ -9,4 +9,9 @@
     3.2 Rồi app chạy bằng gì? container? docker? hay chạy trên OS? Rồi tụi controller có phải app không?
 
 4. Tổng quan của K8s?
-5. Rồi cái kiến trúc khai báo trạng thái mong muốn là sao? toàn bộ đều theo kiến trúc đó à?
+5. Luồng khởi tạo K8S sao?
+6. Giờ đụng tới cái controller. cái vụ khai báo mong muốn và k8s tự giải quyết.
+
+---
+
+7. ArgoCD
