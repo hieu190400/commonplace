@@ -1,3 +1,13 @@
+# 1-7-2026
+
+7. Cái đống mặc định của k8s/k3s gồm những gì? có thể chia sao? 
+8. Có cái nào cũ ít xài không? thay thế mới bằng cái nào? có cái khỉ nào stable cả chục năm như c/c++ mà không chuyển nổi qua rust không?
+9. Khi học controller thì nên học cái gì? cái gì là cơ bản của controller để có thể xài cách thức đó qua nhiều controller?
+10. Giờ tới cái network đi, chắc siêu nhức đầu. Cái luồng từ bên ngoài internet vô được cái container nó sao?
+11. Giờ tới cái vụ kubectl, câu lệch sẽ có cú pháp sao? có chuẩn chung không?
+12. ChatGPT kêu học tiếp cái lệnh apply.
+---
+
 # 30-6-2026
 
 1. K8S là gì? 
@@ -11,7 +21,3 @@
 4. Tổng quan của K8s?
 5. Luồng khởi tạo K8S sao?
 6. Giờ đụng tới cái controller. cái vụ khai báo mong muốn và k8s tự giải quyết.
-
----
-
-7. ArgoCD
