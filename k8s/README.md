@@ -1,6 +1,6 @@
 ## Nói sơ qua
 
-Mình học K8s là do nhiều công ty giờ đòi K8s nhiều quá. Mình trước là chủ yếu là Cloud AWS dự án nhỏ và vừa nên không chọn k8s được. 
+Mình học K8s là do nhiều công ty giờ đòi K8s nhiều quá. Trước đó chủ yêu làm AWS Cloud dự án nhỏ và vừa nên không chọn k8s được. 
 
 Cấu hình và techstack sơ bộ 
 - Proxmox: 8vCPU + 24GB RAM
@@ -13,4 +13,4 @@ Repo: https://github.com/hieu190400/gitops-homelab
 
 ## 1-7-2026
 
-Giờ mà đi học hết tụi controller chắc mấy tháng chưa xong. Giờ học cái gì để debug khi có lỗi thôi. Giờ học tùm lum thì hơi ngu. Quậy để lỗi rồi học thôi.
+Giờ mà đi học hết tụi controller chắc mấy tháng chưa xong. Học cái gì để debug khi có lỗi thôi. Quậy để lỗi rồi học.
