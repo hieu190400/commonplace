@@ -1,3 +1,9 @@
+# 2-7-2026
+12. Chắc là tìm hiểu thằng argocd trước đi.
+13. Dính cái incident nên giờ phải coi cái server-side apply. Cách nó xử lý CRUD sao?
+
+---
+
 # 1-7-2026
 
 7. Cái đống mặc định của k8s/k3s gồm những gì? có thể chia sao? 
@@ -5,7 +11,7 @@
 9. Khi học controller thì nên học cái gì? cái gì là cơ bản của controller để có thể xài cách thức đó qua nhiều controller?
 10. Giờ tới cái network đi, chắc siêu nhức đầu. Cái luồng từ bên ngoài internet vô được cái container nó sao?
 11. Giờ tới cái vụ kubectl, câu lệch sẽ có cú pháp sao? có chuẩn chung không?
-12. ChatGPT kêu học tiếp cái lệnh apply.
+
 ---
 
 # 30-6-2026

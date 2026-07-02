@@ -1,6 +1,30 @@
+# 2-7-2026
+
+12. Giờ lấy mấy cái chính ra mổ xẻ. Đơn giản là nó sẽ có thêm object application và controller reconcile application. 
+
+Nhìn qua CRD thì nó chỉ có 3 cái mới.
+kubectl get crd | findstr argoproj.io
+applications.argoproj.io
+applicationsets.argoproj.io
+appprojects.argoproj.io          
+
+À nó có thêm cái UI va API cho tiện thao tác nữa. Vậy chỉ cần quan tâm application thôi. 
+
+Vậy nhiệm vụ của mình cũng chỉ là CRUD cái application. Xong!
+
+13. Có thể chia thành
+- Client-Side Apply (CSA): là kubectl nó lấy thông tin từ server và của mình so sánh(Three-way Merge) xong gửi phần thay đổi(PATCH) cho server. Nói chung là nó tính toán rất chi là nhức đầu nên bỏ qua chi tiết. 
+- Server-Side Apply (SSA): Sau này người ta thấy cách xài kubectl nó ngu quá nên đẻ ra thằng này. Mà ngu như thế nào thì kệ không tìm hiểu. Đơn giản là giờ kubectl nó quăng cho API tự xử. 
+Sau đó tuy là CRUD nó sẽ chia thành.
+kubectl replace -> thay thế luôn.
+kubectl patch -> chỉ sửa 1 vài field.
+kubectl create -> Tạo mới luôn.
+
+---
+
 # 1-7-2026
 
-7. Chắc chia theo 
+7. Chắc chia theo:
     - Compute: Pod, ReplicaSet, Deployment, StatefulSet, DaemonSet, Job, CronJob
     - Networking: ingress, Service,...
     - Storage: PersistentVolume
