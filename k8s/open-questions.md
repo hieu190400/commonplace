@@ -1,3 +1,10 @@
+# 3-7-2026
+14. Cái volume này nọ là sao? lở pod chết thì sao? volume nó có tự chạy qua pod mới không?
+15. Giờ tới cái longhorn, nó có lấy quá trớn không? giới hạn được không?
+16. Cách để quản lý secret và xoay vòng trong k8s.
+
+---
+
 # 2-7-2026
 12. Chắc là tìm hiểu thằng argocd trước đi.
 13. Dính cái incident nên giờ phải coi cái server-side apply. Cách nó xử lý CRUD sao?

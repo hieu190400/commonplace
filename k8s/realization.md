@@ -1,3 +1,27 @@
+# 3-7-2026
+14. Giờ đi tới volume. Tôi sẽ tìm hiểu từ trong ra ngoài.
+- Đi từ container ra thì có vẻ volume là của pod. vậy là so với docker compose thì pod sẽ là host. Vậy là 1 volume của pod gắn được nhiều container trong nó.
+- Giờ đi tới volume đó lưu ở đâu? 
+    - emptyDir: trống đó, lưu như cache trên ổ đĩa của node. Có vẻ pod chết nó đi theo. khá giống ebs dạng instance type.
+    - hostPath: dạng này xịn hơn xíu, lưu riêng trên Node. Ủa mà vậy là lở cái pod nó nhảy qua Node khác là đi bụi?
+    - PVC: chổ khai báo để gắn storage vô? vậy ngoài cái cluster luôn à? 
+        - Thằng này trong ngoài đều có luôn.
+    - config và secret? cái này giống chổ lấy biến môi trường rồi.
+
+14. Mở rộng thêm giờ đi vô cái PVC. 
+- PVC(Persistent Volume Claim) chỉ là cái kind trong etcd thôi. theo gpt thì nó giống đơn xin xử dụng ổ đĩa. 
+- Còn ổ đĩa thì là PV(Persistent Volume): nó cũng là object trong etcd luôn. Có vẻ như nó là chổ đăng ký ổ đĩa với k8s.
+
+14. Tiếp tục đây. Vậy ổ đĩa là cái gì? phải tạo trước đúng không? rồi gắn vô cluster sao?
+- Nhìn chung nó có thể là Block Storage(SSD, AWS EBS,...) hoặc File Storage như CephFS hoặc thậm chí S3 luôn nếu chơi tà đạo.
+- Tạo trước thì không kiểu phải có storage trước. 
+- Gắn vô cluster thì phải có CSI driver. nếu là tụi cloud thì có buildin rồi. Còn nếu là NAT hay local thì phải cài thêm.
+- Giờ coi như xong và quyết định dùng Longhorn. Nó tạo được volume dùng dung lượng của Node luôn. Có khi nào nó lấy quá trớn không ta?
+
+15. Cài longhorn rồi. Giờ vấn đề argocd lấy values.yaml của chart gốc thì cái values.yaml có đè lên không? Chatgpt nói là merge. Ok.
+
+---
+
 # 2-7-2026
 
 12. Giờ lấy mấy cái chính ra mổ xẻ. Đơn giản là nó sẽ có thêm object application và controller reconcile application. 
