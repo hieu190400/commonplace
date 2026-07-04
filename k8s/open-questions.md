@@ -1,7 +1,18 @@
+# 5-7-2026
+18. Sau ngày hôm qua thì sẽ thấy khi node chết thì tài nguyên dồn qua node còn sống. Khi node sống lại thì nó lại không lấy lại được. Có vẻ phải coi cách nó cân bằng lại.
+19. Cách để quản lý secret và xoay vòng trong k8s.
+
+# 4-7-2026
+16. Giờ thử tới cái longhorn, nếu 1 rep thì lở node bị tắt sẽ ra sao? 
+17. Rồi nếu 3 node, 2 rep, chết 1 node -> longhorn đẩy qua tạo rep trên node còn lại. Xong xuôi node đó lên lại, lúc này sao? dữ liệu vẫn còn trên A? dung lượng vẫn mất? 
+
+
+---
+
 # 3-7-2026
 14. Cái volume này nọ là sao? lở pod chết thì sao? volume nó có tự chạy qua pod mới không?
 15. Giờ tới cái longhorn, nó có lấy quá trớn không? giới hạn được không?
-16. Cách để quản lý secret và xoay vòng trong k8s.
+
 
 ---
 

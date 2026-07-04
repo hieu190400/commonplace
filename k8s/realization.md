@@ -1,3 +1,11 @@
+# 4-7-2026
+16. Cấu hình mặc định nó bảo vệ dữ liệu nên cái app coi như mất luôn ô đĩa khi node đó bay màu. Nếu node bay màu luôn thì mất luôn dữ liệu. 
+
+17. Nó sẽ cố phân phối lại replica theo cấu hình của nó `Replica Replenishment Wait Interval = 600`. 
+
+Sau 10 phút thì nó tự đẻ replica mới để khớp cấu hình.
+
+Sau đó tôi bật worker2 lên lại thì nó không xóa cái cũ ngay.
 # 3-7-2026
 14. Giờ đi tới volume. Tôi sẽ tìm hiểu từ trong ra ngoài.
 - Đi từ container ra thì có vẻ volume là của pod. vậy là so với docker compose thì pod sẽ là host. Vậy là 1 volume của pod gắn được nhiều container trong nó.
@@ -19,6 +27,7 @@
 - Giờ coi như xong và quyết định dùng Longhorn. Nó tạo được volume dùng dung lượng của Node luôn. Có khi nào nó lấy quá trớn không ta?
 
 15. Cài longhorn rồi. Giờ vấn đề argocd lấy values.yaml của chart gốc thì cái values.yaml có đè lên không? Chatgpt nói là merge. Ok.
+longhorn có giới hạn nhưng trong values thì nó chỉ cho giới hạn kiểu chừa lại bao nhiêu % cho máy host.
 
 ---
 
