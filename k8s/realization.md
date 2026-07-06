@@ -1,3 +1,27 @@
+# 6-7-2026
+18. init là khởi tạo cái Master key để mã hóa toàn bộ dữ liệu. Rồi tại Root token. cái này 
+hình như phải làm thủ công cho an toàn.
+
+Rồi cái seal mới mệt. Mỗi khi khởi động lại nó khóa bằng Master key(private key) nên mở bằng Unseal Keys.
+
+Root key là key để login tài khoản root của vault.
+
+19. Câu này hơi... nhức đầu rồi. 
+Đầu tiên nó sẽ có cái external-secrets. Yep, 1 cái app mới nữa đó. Nó sẽ có nhiệm vụ là lụm secret của mấy nhà cung cấp và bỏ vào secret của k8s.
+
+20. Chatgpt nói nhiều cách.
+
+| Giải pháp | Cách hoạt động | Secret có nằm trong Kubernetes Secret không? | Khi nào dùng |
+|------------|----------------|----------------------------------------------|---------------|
+| **External Secrets Operator (ESO)** | Đồng bộ secret từ Vault/AWS/Azure/GCP vào Kubernetes Secret | ✅ Có | Phổ biến nhất, tương thích với hầu hết ứng dụng |
+| **Secrets Store CSI Driver** | Mount secret trực tiếp vào Pod dưới dạng file thông qua CSI Volume | ❌ Không (mặc định) | Muốn tránh lưu secret trong etcd, ứng dụng có thể đọc từ file |
+| **Vault Agent Injector** | Inject sidecar Vault Agent để lấy secret từ Vault và ghi vào shared volume | ❌ Không | Chỉ dùng với Vault, phù hợp khi cần Dynamic Secrets hoặc tự động renew secret |
+| **Vault Secrets Operator (VSO)** | Operator chính thức của HashiCorp đồng bộ secret từ Vault vào Kubernetes Secret | ✅ Có | Hệ thống lấy Vault làm trung tâm, muốn dùng giải pháp chính chủ của HashiCorp |
+
+**Vậy tính ra mỗi cách độ bảo mật với độ tiện lợi sẽ khác nhau. Thôi cái gì tiện thì mình làm.**
+
+---
+
 # 4-7-2026
 16. Cấu hình mặc định nó bảo vệ dữ liệu nên cái app coi như mất luôn ô đĩa khi node đó bay màu. Nếu node bay màu luôn thì mất luôn dữ liệu. 
 
@@ -6,6 +30,9 @@
 Sau 10 phút thì nó tự đẻ replica mới để khớp cấu hình.
 
 Sau đó tôi bật worker2 lên lại thì nó không xóa cái cũ ngay.
+
+---
+
 # 3-7-2026
 14. Giờ đi tới volume. Tôi sẽ tìm hiểu từ trong ra ngoài.
 - Đi từ container ra thì có vẻ volume là của pod. vậy là so với docker compose thì pod sẽ là host. Vậy là 1 volume của pod gắn được nhiều container trong nó.

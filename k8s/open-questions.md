@@ -1,6 +1,7 @@
-# 5-7-2026
-18. Sau ngày hôm qua thì sẽ thấy khi node chết thì tài nguyên dồn qua node còn sống. Khi node sống lại thì nó lại không lấy lại được. Có vẻ phải coi cách nó cân bằng lại.
-19. Cách để quản lý secret và xoay vòng trong k8s.
+# 6-7-2026
+18. Cách để quản lý secret và xoay vòng trong k8s. Giờ đi tới vault. Hình như phải init? vậy init là gì?
+19. Câu hỏi tốn siêu nhiều thời gian. Rồi làm sao cái k8s nó lấy được secret từ HashiCorp. 
+20. Cái nhức đầu nè, auth là gì? làm sao để xác thực thằng external với nhà cung cấp. Hỗ trợ bao nhiêu cái?
 
 # 4-7-2026
 16. Giờ thử tới cái longhorn, nếu 1 rep thì lở node bị tắt sẽ ra sao? 
