@@ -20,6 +20,62 @@ Root key là key để login tài khoản root của vault.
 
 **Vậy tính ra mỗi cách độ bảo mật với độ tiện lợi sẽ khác nhau. Thôi cái gì tiện thì mình làm.**
 
+21. Backup thì là cái recurringJob của longhorn. kind recurringJob. 
+    - tạo job xong gắn vào volume. cách này khá dể sửa, nhưng không có stable.
+    - hoặc gắn thẳng vào storage_class luôn. Cách này siêu stable riết muốn đổi cũng khó.
+    - Tạo cái minio(s3 local) bên ngoài rồi cho nó connect tới là được.
+
+## Từ Incident
+
+### nói qua về cái Vault
+
+1. Đầu tiên secret engine
+- KV: đơn giản là key-value
+- Dynamic Secret Engine: Kiểu vault nó đứng ra làm trung gian, khi cần thì nó sẽ cấp password và tự remove vậy. 
+    - Cái này nhìn có vẻ xin. Như database đi. Cấp cho nó tài khoản để tạo được user. Mỗi khi cần đăng nhập nó tự tạo user rồi password hạn trong 1 tiếng. Xong thì nó tự xóa luôn. 
+    - Đọc xong thấy ok nhưng phải để ý cái tài khoản đưa cho vault á. an toàn không? Rồi lại quay lại câu chuyện bảo mật cho vault :)
+
+2. Resilience and recovery
+- Cái này là để seal lại vault hoặc backup(bản trả phí)
+
+3. Access control:
+- Chổ này là RBAC nè. Để coi nó có Access control, Authentication, Organization.
+    - Access control: chứa policy đơn giản là
+    ```
+    path "kv/data/minio" {
+        capabilities = ["read"]
+    }
+    ```
+    - Authentication: Auth method thì nó hỗ trợ rất nhiều. rồi còn có 2FA,3FA này nọ. rồi OIDC luôn (SSO à), nice. 
+    - Auth này vừa để đăng nhập giao diện với lấy secret này nọ luôn.
+    - Organization: group để chia quyền chắc vậy. 
+
+### Cái cơ chế của External Secrets Operator (ESO).
+
+1. Đầu tiên nó sẽ cần 1 cái secret store ở bên ngoài đã. Trong trường hợp này là vault nằm trong cluster.
+    - Cần 1 thằng ClusterSecretStore để kết nối với chỗ lưu secret bên ngoài. 
+    - Muốn kết nối cần xác thực nữa đúng không? trường hợp này dùng cluster luôn. Cần phải tạo kubernetes role bên giao diện của Vault đó.
+    ![alt text](images/vault/k8s-role.png)
+    - Xong rồi điền vào ClusterSecretStore phần provider/auth là xong.
+    - Sau đó nó sẽ tạo ra cái Secret của k8s và lưu vô etcd.
+    - Nó chỉ ngồi đó đồng bộ thôi chưa làm gì hết.
+    - Mà quên cần policy nữa, cũng tạo bên UI luôn.
+    ```
+    path "kv/data/minio" {
+        capabilities = ["read"]
+        }
+
+        path "kv/data/minio/*" {
+        capabilities = ["read"]
+        }
+
+        path "kv/metadata/minio" {
+        capabilities = ["read", "list"]
+        }
+    ```
+
+2. Sau đó app lấy secret k8s ra dùng. Kind là ExternalSecret và móc vào ClusterSecretStore là xong.
+
 ---
 
 # 4-7-2026
