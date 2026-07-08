@@ -1,4 +1,62 @@
+# 8-7-2026
+
+22. LGTM là gộp của 4 công cụ: Loki (log), Grafana (dashboard), Tempo (lưu trace), Mimir(lưu metrics). Cái cuối có thể thay thành Prometheus.
+
+23. 3 trụ cột (3 Pillars) là 
+- Metrics: Số liệu CPU, số request, latency.
+- Logs: Cái này dễ hiểu rồi khỏi nói.
+- Traces: Theo dấu đường đi của request qua nhiều service. Hồi đó thấy có thằng x-ray của AWS rồi.
+=> Người ta gọi chung là telemetry.
+
+24. Lịch sử như sau
+- Đời đầu 2012–2016 là ELK Stack (**Log là vua chúa**): Ưu điểm là enterprise, nhược điểm cũng là enterprise. Đời đầu viết bằng Java, ngốn RAM kinh khủng. Luồng là 
+Application -> Log File -> Logstash -> Elasticsearch ->Kibana
+
+- 2016–2018 Prometheus nhảy lên. Người ta muốn biết thêm CPU, RAM, request. Hay còn gọi là metrics. Luồng là Exporter -> Prometheus -> Grafana
+
+- Giai đoạn tiếp theo, Trace ra đời. Jaeger và Zipkin xuất hiện. Người ta muốn biết request đi qua mấy service (Chắc do microservice). 
+=> sinh ra Distributed Tracing.
+
+- Giai đoạn kế, Grafana bắt đầu thấy khó chịu: Tại sao lại phải xài nhiều tools của nhiều bên vậy, thằng Kibana bên ELK chiếm RAM quá trớn.
+=> Đẻ ra log collection của riêng mình là Loki. 
+
+- Giai đoạn kế, lại là thằng Grafana thấy mình làm được 2 thứ rồi sao lại không làm hết => Tempo ra đời cho trace.
+
+- Giai đoạn 6 (OpenTelemetry): Sau khi 1 đống tools nhảy ra để làm 3 cái là lưu log, lưu metrics, lưu trace. Rồi người ta còn custom metrics, trace bằng code nữa. Mỗi thằng lại có 1 SDK và code 1 kiểu, mỗi lần đổi là viết lại chết mợ luôn => Đẻ ra thằng OpenTelemetry để chuẩn hóa lại. Chỉ 1 code duy nhất và OpenTelemetry sẽ xử lý đống còn lại, gửi đi đâu là chuyện của nó.
+
+- Giai đoạn 7 (Grafana Alloy): Mỗi thằng tools  Telemetry lại phải cài 1 agent lên máy. metrics có Prometheus, trace thì OTel Collector, log thì Promtail. Sao chúng ta không dùng 1 agent để gom thôi? Tao giới thiệu Alloy nè.
+
+25. Nhìn chung thì cái telemetry này đều có 1 flow chung. Flow đi từ
+- Application: Là mấy cái chương trình đang chạy cần theo dõi.
+- Producer: Là cái chổ sinh ra telemetry, code sinh log, code sinh trace. Hoặc phần mềm ngồi đọc chỉ số cpu, ram này nọ.
+- Collector: Là cái thằng agent hay chương trình gom đống telemetry đó để đem đi.
+- Backend: là cái chương trình có database nhận telemetry do Collector gửi tới.
+- Dashboard: Là cái chổ vẽ cái telemetry cho mình coi. Lấy dữ liệu từ Backend.
+ 
+
+26. Phân tích xong rồi tôi chọn:
+- Producer: 
+    - Metrics: Prometheus node exporte và mấy cái có sẵn
+    - Logs: thì có sẵn rồi khỏi nói. stdout, stderr á.
+    - Trace: OpenTelemetry SDK
+- Collector: 
+    - Metrics: OpenTelemetry Collector thay cho prometheus collector. 
+    - Logs: OpenTelemetry Collector luôn.
+    - Trace: OpenTelemetry Collector luôn.
+- Backend: 
+    - Metrics: Prometheus luôn có sẵn thì xài. 
+    - Logs: Chọn Loki của grafana.
+    - Trace: Tempo của grafana.
+- dashboard: Là grafana cho toàn bộ cho khỏe.
+
+Suy nghĩ 1 hồi thì có mấy lựa chọn như fluent bit cho log, Alloy của grafana cho collector có vẻ ngon, đồ toàn của grafana thôi chắc đồng bộ lắm. 
+
+Nhưng mà OpenTelemetry có vẻ bự hơn. cái Otel SDK chuẩn CNCF gì đó. 
+
+---
+
 # 6-7-2026
+
 18. init là khởi tạo cái Master key để mã hóa toàn bộ dữ liệu. Rồi tại Root token. cái này 
 hình như phải làm thủ công cho an toàn.
 

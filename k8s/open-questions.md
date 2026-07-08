@@ -1,13 +1,23 @@
+# 8-7-2026
+22. LGTM stack, giờ đi tới cái đó. Đầu tiên LGTM stack là gì vậy?
+23. Chatgpt có nhắc tới Three Pillars of Observability. Giờ ngồi tìm hiểu đây.
+24. Sau khi hỏi chatgpt thì có 1 đống tools luôn. Lịch sử sẽ ra sao?
+25. Giờ là khúc quan trọng cái pattern nó sao?
+26. Giờ là lúc lựa chọn. chọn cái gì? 
+
+---
+
 # 6-7-2026
 18. Cách để quản lý secret và xoay vòng trong k8s. Giờ đi tới vault. Hình như phải init? vậy init là gì?
 19. Câu hỏi tốn siêu nhiều thời gian. Rồi làm sao cái k8s nó lấy được secret từ HashiCorp. 
 20. Cái nhức đầu nè, auth là gì? làm sao để xác thực thằng external với nhà cung cấp. Hỗ trợ bao nhiêu cái?
 21. Thử nghiệm luôn cái backup.
 
+---
+
 # 4-7-2026
 16. Giờ thử tới cái longhorn, nếu 1 rep thì lở node bị tắt sẽ ra sao? 
 17. Rồi nếu 3 node, 2 rep, chết 1 node -> longhorn đẩy qua tạo rep trên node còn lại. Xong xuôi node đó lên lại, lúc này sao? dữ liệu vẫn còn trên A? dung lượng vẫn mất? 
-
 
 ---
 
