@@ -8,8 +8,16 @@ Cấu hình và techstack sơ bộ
 - 1 VM bastion để SSH: 2vCPU + 0.5GB RAM
 - 1 VM `k3sServer v1.35.5+k3s1` làm control panel node: 2vCPU + 6GB RAM
 - 2 VM `K3sworker v1.35.5+k3s1` làm worker node: mỗi thằng 2vCPU + 4GB RAM
+- 1 VM chạy Minio: 1vCPU + 1GB RAM
+- 1 VM host docker registry: 1vCPU + 0.5GB RAM 
 
 Repo: https://github.com/hieu190400/gitops-homelab
+
+
+## 14-7-2026
+
+Xong phase 1 về K8s coi như mấy chức năng bình thường đã xong.
+Các thứ còn lại là network policy, SS0, service account phân quyền này nọ, compliant, backup toàn cluster thay vì chỉ volume.
 
 ## 1-7-2026
 

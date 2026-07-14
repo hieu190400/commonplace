@@ -1,3 +1,20 @@
+# 10-7-2026
+27. Rolling update là chiến lược deploy thôi. Nên deploy sao cho tốt nhất. Vậy á. Chi tiết qua câu 28.
+
+28. Có các loại
+- Recreate: kill/ tắt toàn bộ rồi tạo mới. Khá đơn giản
+- RollingUpdate: Nó sẽ mở máy mới trước, nếu máy khỏe thì mới kill máy cũ đi. Nhưng lại khá khác biệt thông số giữ mấy nền tảng. Và thường có 2 thông số.
+    - 1 liên quan tới số lượng máy còn khỏe.
+    - 2 liên quan tới số lượng máy tối đa (tính cả máy mới mở và chưa tắt)
+- Blue-Green Deployment: Ý tưởng là chạy luôn 2 hệ thống mới và cũ cùng 1 lúc. Sau đó route 100% traffic qua hệ thống mới khi nó lên là xong. ổn thì tắt bên cũ. Lỗi thì route ngược về là xong.
+- Canary Deployment: giống Blue-Green nhưng sẽ chia traffic cho hệ thống mới từ từ để kiểm tra ổn định. Tới khi 100 traffic qua hệ thống mới là xong. Này làm ngu là dữ liệu banh chành.
+- Shadow Deployment: Tạo luôn hệ thống mới và traffic sẽ copy qua hệ thống mới cho xử lý giống luôn. Ok rồi mới route qua.
+- Feature Flag: deploy nhưng chưa dùng được, chỉnh biến môi trường mới mở ra. lỗi thì tắt đi.
+- Ring Deployment: là Canary Deployment thôi nhưng nhiều giai đoạn. Ví dụ: 10% traffic qua hệ thống mới thì chỉ cho 10% nhân viên test. Ok thì tăng lên 20% rồi cho 1 phần khách hàng test.
+Cứ thế càng ngày càng nhiều % và nhiều người test.
+
+---
+
 # 8-7-2026
 
 22. LGTM là gộp của 4 công cụ: Loki (log), Grafana (dashboard), Tempo (lưu trace), Mimir(lưu metrics). Cái cuối có thể thay thành Prometheus.

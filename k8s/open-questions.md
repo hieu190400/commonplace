@@ -1,3 +1,7 @@
+# 10-7-2026
+27. Rolling update là cái gì? 
+28. Có bao nhiêu chiến lược deploy? 
+
 # 8-7-2026
 22. LGTM stack, giờ đi tới cái đó. Đầu tiên LGTM stack là gì vậy?
 23. Chatgpt có nhắc tới Three Pillars of Observability. Giờ ngồi tìm hiểu đây.

@@ -1,3 +1,7 @@
+# 10-7-2026
+
+Gitops là config engineer. Toàn ngồi chỉnh file config không.
+
 # 1-7-2026
 
 Kubernetes gồm
