@@ -8,4 +8,8 @@ play đọc pl hơi khó.
 
 Phát hiện thú vị. u: đọc 1 mình thì được, ghép vào đa số thì đọc không được.
 
-Phát hiện u ngắn và dài đang fail
+Phát hiện u dài đang fail
+Phát hiện ig đang fail
+đuôi lv fail, đuôi lf fail.
+tw cần coi luôn.
+âm twelve
