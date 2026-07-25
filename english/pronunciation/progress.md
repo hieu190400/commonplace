@@ -13,3 +13,4 @@ Phát hiện ig đang fail
 đuôi lv fail, đuôi lf fail.
 tw cần coi luôn.
 âm twelve
+mấy cái âm cuối rung hay không rung đang chưa nghe quen.
