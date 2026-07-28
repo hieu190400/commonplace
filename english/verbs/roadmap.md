@@ -1,47 +1,21 @@
-# Verb
+# Verb Roadmap
 
-## 1. Core Verbs
+## Phase 0: https://youglish.com/
+
+Tìm từ trên đây rồi não tự nhảy sau hàng trăm câu thôi.
+
+## Phase 1. Learn by Concept
+
+### Existence & State
+
 - be
-- have
-- do
-- get
-- make
-- take
-- go
-- come
-- see
-- know
-- think
-- say
-- tell
-- ask
-- give
-- find
-- keep
-- put
-- let
 - become
-- leave
-- bring
-- work
-- call
-- try
-- help
-- show
-- hear
-- feel
-- want
-
----
-
-## 2. By Meaning
-
-### Existence & Being
-- be
 - exist
 - remain
 - stay
 - live
+- seem
+- appear
 
 ### Possession
 - have
@@ -69,13 +43,22 @@
 - return
 - travel
 
-### Position & Location
-- sit
-- stand
-- lie
-- place
+### Transfer
+- take
+- give
+- bring
+- send
+- receive
+- pass
+- offer
+
+### Placement & Control
 - put
 - set
+- keep
+- hold
+- let
+- place
 
 ### Communication
 - say
@@ -90,7 +73,7 @@
 - discuss
 - report
 
-### Thinking
+### Cognition
 - think
 - know
 - believe
@@ -103,6 +86,7 @@
 - decide
 - consider
 - expect
+- mean
 
 ### Perception
 - see
@@ -116,7 +100,7 @@
 - notice
 - observe
 
-### Emotion
+### Emotion & Intention
 - love
 - like
 - hate
@@ -127,6 +111,10 @@
 - regret
 - appreciate
 - miss
+- want
+- need
+- try
+- wish
 
 ### Creation
 - make
@@ -151,108 +139,79 @@
 - rise
 - drop
 
-### Daily Activities
-- eat
-- drink
-- sleep
-- wake
-- wash
-- wear
-- cook
-- clean
-- study
-- exercise
-
-### Social Interaction
-- meet
-- visit
-- invite
-- join
-- help
-- thank
-- greet
-- support
-- follow
-
-### Work & Study
-- work
-- study
-- learn
-- teach
-- practice
-- train
-- manage
-- organize
-
-### Money & Business
-- buy
-- sell
-- pay
-- spend
-- save
-- earn
-- invest
-- borrow
-- lend
-
-### Technology
-- use
-- install
-- download
-- upload
-- connect
-- copy
-- paste
-- print
-
-### Travel & Transportation
-- travel
-- drive
-- ride
-- fly
-- sail
-- park
-- board
-
-### Law & Control
-- allow
-- permit
-- forbid
-- require
-- order
-- arrest
-- punish
-- protect
-
-### Cause & Effect
-- cause
-- make
-- let
-- force
-- allow
-- prevent
-- affect
-- influence
-
 ---
 
-## 3. By Valency
+## Phase 2. Grammar Patterns
 
 ### SV
 
 ### SVC
 
+### SVA
+
 ### SVO
+
+### SVOA
 
 ### SVOO
 
 ### SVOC
 
-### SVOA
+### Existential (There + be)
+
+### Dummy Subject (It + Verb)
 
 ---
 
-## 4. Verb Families
+## Phase 4. Complement Patterns
+
+### Verb + Noun
+
+### Verb + Pronoun
+
+### Verb + to V
+
+### Verb + V-ing
+
+### Verb + that-clause
+
+### Verb + wh-clause
+
+### Verb + Adj
+
+### Verb + PP
+
+---
+
+## Phase 5. Preposition Patterns
+
+### Verb + to
+
+### Verb + for
+
+### Verb + with
+
+### Verb + on
+
+### Verb + in
+
+### Verb + into
+
+### Verb + at
+
+### Verb + from
+
+### Verb + over
+
+### Verb + through
+
+### Verb + about
+
+### Verb + of
+
+---
+
+## Phase 6. Lexical Families
 
 ### be
 
@@ -276,11 +235,15 @@
 
 ### keep
 
+### hold
+
+### let
+
+### set
+
 ### look
 
 ### turn
-
-### set
 
 ### run
 
@@ -290,10 +253,38 @@
 
 ---
 
-## 5. Multi-word Verbs
+## Phase 7. Multi-word Verbs
 
 ### Phrasal Verbs
 
 ### Prepositional Verbs
 
 ### Phrasal-prepositional Verbs
+
+---
+
+## Phase 8. Topic Vocabulary (Expansion)
+
+### Daily Activities
+
+### Social Interaction
+
+### Work & Study
+
+### Money & Business
+
+### Technology
+
+### Travel & Transportation
+
+### Law & Control
+
+### Cause & Effect
+
+### Health
+
+### Education
+
+### Environment
+
+### Media & Communication
