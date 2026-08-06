@@ -2,7 +2,7 @@
 
 ## Vài lời về repo.
 
-Repo này không phải chổ lưu kiến thức, định nghĩa. 
+Repo này không phải chổ lưu kiến thức, định nghĩa. Repo này lưu cách để sau này tìm lại kiến thức.
 
 Repo này lưu lại quá trình mình học, suy nghĩ và đúc kết 1 vấn đề.
 
@@ -95,6 +95,16 @@ Chỉ có hai cách để đỡ tốn thời gian hơn:
 
 * Tìm được phương pháp phù hợp với chính mình.
 * Hoặc dùng "đô la thần chưởng", thuê người giỏi chỉ đường để đỡ phải tự mò.
+
+### Câu hỏi muôn thuở - Thời gian đâu?
+
+Cái này thú vị, người ta thường nói là không có thời gian làm cái này, không có thời gian làm cái kia.
+
+Nghe có vẻ thuyết phục nhỉ, mình cũng thấy vậy. Nhưng có chắc là không có thời gian không? hay việc học 1 thứ gì đó không quan trọng đến vậy?
+
+Bạn có thể lên youtube hay chatgpt hỏi thử xem phải không? làm gì có vụ không có thời gian theo nghĩa đen :). 
+
+Viết tới đây tự hiểu rồi, mỗi người mỗi suy luận, để bỏ dở vậy cho vui.
 
 ### Cách duy trì việc học.
 
