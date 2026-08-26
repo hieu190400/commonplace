@@ -7,3 +7,7 @@ Rồi một hôm lần phỏng vấn kỹ thuật đầu tiên trong gần 5 th�
 Nghe hài vl, sau khi nhận được câu trả lời xong vẫn không hiểu. Dĩ nhiên sau đó rớt rồi.
 
 Nên nó mới có cái mục devops này, tôi sẽ tìm hiểu lại toàn bộ những thứ liên quan tới devops.
+
+# Kết thúc luôn. 
+
+**Framework này làm tôi phải suy nghĩ quá nhiều nên bỏ luôn rồi không có xài**
