@@ -1,7 +1,3 @@
-## /ɑ/
-
-Đây là o ngắn, đơn giản là o tiếng việt nhưng đọc ngắn đi.
-
 ## /aɪ/ 
 
 Đọc là ai hết
@@ -12,7 +8,7 @@
 
 ## /ɔ/
 
-Đây là o dài. o tiếng việt nhưng Tròn môi, Lưỡi cong lên chạm vào vòm miệng khi kết thúc âm
+Đây là o dài thường người ta thêm : á. o tiếng việt nhưng Tròn môi.
 
 ## /ɔɪ/
 

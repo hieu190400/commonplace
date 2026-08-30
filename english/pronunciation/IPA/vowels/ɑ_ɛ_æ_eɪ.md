@@ -1,3 +1,7 @@
+## /ɑ/
+
+a mở, gần "a" tiếng Việt
+
 ## /ɛ/
 
 Này là âm e, khá giống e trong tiếng việt.
