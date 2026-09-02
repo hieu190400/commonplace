@@ -108,3 +108,7 @@ Thực tế thì 2 cái 1 và 2 tốt thì vẫn hiểu được. Còn 1 và 2 k
 Đó là về accent. Tiếng anh chuẩn nó sẽ có anh mỹ, anh úc, anh uk, cót len. Mình chỉ nên chọn 1 hệ thống để học thôi. 
 
 ====> Tôi chọn anh mỹ cho nó dễ.
+
+## Kết thúc
+
+Tôi chỉ học để biết 1 phần, còn lại là luyện tập.

@@ -12,4 +12,4 @@ Giờ luyện sao đây?
 
 ## 
 
-hurt <> heart
+ʊr bị ngu
